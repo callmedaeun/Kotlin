@@ -72,13 +72,20 @@ private fun week03Classes(){
             this.weight = weight
             Log.d("KotlinWeek03", "$species 의 무게 : 이제 $weight kg")
         }
-        fun makesound(){
+        open fun makesound(){
             Log.d"KotlinWeek03", "$species 가 소리를 냅니다")
         }
     }
     val puppy = Animal("강아지", 6.5_
     puppy.makeSound()
-    )
+
+    class Dog(species String, weight: Double, val breed: string) : Animal(species, weight){
+        override fun makeSound(){
+            Log.d("KotlinWeek03", "$breed ($species) 가 멍멍 짖습니다!")
+        }
+    }
+    val dog = Dog("개", 12.5, "골든 리트리버")
+
 }
 
 private fun week03Classes(){
