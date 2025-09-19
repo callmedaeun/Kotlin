@@ -39,14 +39,47 @@ private fun week03Collections(){
     Log.d("KotlinWeek03", "== Kotlin Collections ==")
 
     val fruits = listOf("apple", "banana", "orange")
+    val mutavleFruits = mutavleListDf("kiwi", "watermelon")
 //    fruits.add("kiwi")
+    mutavleFruits.add("banana")
+
     Log.d("KotlinWeek03", "Fruits : $fruits")
+    Log.d("KotlinWeek03", "Mutable Fruits : $mutavleListDf")
+
+    var scores = mapOf("Kim" to 97, "Park" to 100, "Lee" to 99)
+    Log.d("KotlinWeek03", "Scores : $scores")
 
     for(fruit in fruits){
         Log.d("KotlinWeek03", "Fruit : $fruit")
     }
-}
 
+    scores.farEach{(name, score) -> println("$name scored $score")}
+}
+private fun week03Classes(){
+    Log.d("KotlinWeek03", "== Kotlin Classes ==")
+    class Person(val name: String, var age: Int) {
+        fun introduce(){
+            Log.d
+        }
+    }
+    var person1 = Person("홍길동", 31)
+    person1.introduce()
+    person1.birthday()
+
+    class Animal(bar specties: String){
+        var weight: Double = 0.0
+        constructor(spercies: String, weight: Double) : this(specios) {
+            this.weight = weight
+            Log.d("KotlinWeek03", "$species 의 무게 : 이제 $weight kg")
+        }
+        fun makesound(){
+            Log.d"KotlinWeek03", "$species 가 소리를 냅니다")
+        }
+    }
+    val puppy = Animal("강아지", 6.5_
+    puppy.makeSound()
+    )
+}
 
 private fun week03Classes(){
     println("== Kotlin Classes ==")
